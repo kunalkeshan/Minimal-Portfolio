@@ -22,10 +22,13 @@ export const postQuery = groq`*[_type == "post" && slug.current == $slug][0]{
   ..., "slug": slug.current, "image": mainImage.asset->url, "alt": mainImage.alt, body, author->{"image": image.asset->url, "alt": image.alt, name, "slug": slug.current}, categories[]->{title, "slug": slug.current}
 }`;
 
+// Get navigation items by their type
+export const navigationItemsQuery = groq`*[_type == "navigation" && (type == "common" || type == $type)]{ ... } | order(type asc, order asc)`;
+
 // Get all FAQs
 export const faqsQuery = groq`*[_type == "faq"]{ ... } | order(order asc)`;
 
 // Get the main portfolio user
-export const mainPortfolioUserQuery = groq`*[_type == "team" && isMain == true][0]{ 
+export const mainPortfolioUserQuery = groq`*[_type == "author" && isMain == true][0]{ 
     ..., "image": image.asset->url, "alt": image.alt, "slug": slug.current
   }`;
