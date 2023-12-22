@@ -95,6 +95,14 @@ export default defineType({
 			group: 'professional',
 		}),
 		defineField({
+			name: 'skills',
+			title: 'Skills',
+			type: 'array',
+			of: [{ type: 'string' }],
+			description: 'List of skills possessed by the author.',
+			group: 'professional',
+		}),
+		defineField({
 			name: 'github',
 			title: 'GitHub Profile',
 			type: 'url',
