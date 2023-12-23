@@ -1,11 +1,57 @@
 // Navigation Data
 
-export const CURRENT_AVAILABLE_NAVIGATION: CurrentAvailableNavigation = [
-	{ name: 'Home', url: '/' },
-	{ name: 'About', url: '/about' },
-	{ name: 'Experience', url: '/experience' },
-	{ name: 'Posts', url: '/posts' },
-	{ name: 'Projects', url: '/projects' },
-	{ name: 'Terms & Conditions', url: '/terms' },
-	{ name: 'Privacy Policy', url: '/privacy' },
+type NavdataCollection = ReadonlyArray<Navdata>;
+
+const COMMON_NAVIGATION: NavdataCollection = [
+	{
+		name: 'About',
+		url: '/about',
+		target: '_self',
+	},
+	{
+		name: 'Experience',
+		url: '/experience',
+		target: '_self',
+	},
+	{
+		name: 'Projects',
+		url: '/projects',
+		target: '_self',
+	},
+	{
+		name: 'Posts',
+		url: '/posts',
+		target: '_self',
+	},
+];
+
+export const NAVBAR_NAVIGATION: NavdataCollection = [...COMMON_NAVIGATION];
+
+export const FOOTER_NAVIGATION: NavdataCollection = [
+	{
+		name: 'Home',
+		url: '/',
+		target: '_self',
+	},
+	...COMMON_NAVIGATION,
+	{
+		name: 'Contact',
+		url: '/contact',
+		target: '_self',
+	},
+	{
+		name: 'FAQs',
+		url: '/contact#faqs',
+		target: '_self',
+	},
+	{
+		name: 'Terms & Conditions',
+		url: '/terms',
+		target: '_self',
+	},
+	{
+		name: 'Privacy Policy',
+		url: '/privacy',
+		target: '_self',
+	},
 ];

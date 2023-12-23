@@ -1,12 +1,9 @@
-type CurrentAvailableNavigation = [
-	{ name: 'Home'; url: '/' },
-	{ name: 'About'; url: '/about' },
-	{ name: 'Experience'; url: '/experience' },
-	{ name: 'Posts'; url: '/posts' },
-	{ name: 'Projects'; url: '/projects' },
-	{ name: 'Terms & Conditions'; url: '/terms' },
-	{ name: 'Privacy Policy'; url: '/privacy' }
-];
+interface Navdata {
+	name: string;
+	url: string;
+	target: '_blank' | '_self';
+}
+
 
 type NavigationItem = Readonly<{
 	_id: string;
