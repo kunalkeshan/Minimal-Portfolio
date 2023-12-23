@@ -4,18 +4,6 @@ interface Navdata {
 	target: '_blank' | '_self';
 }
 
-
-type NavigationItem = Readonly<{
-	_id: string;
-	custom: boolean;
-	name?: string;
-	customName?: string;
-	customUrl?: string;
-	target: '_self' | '_blank';
-	type: 'custom' | 'navbar' | 'footer';
-	order: number;
-}>;
-
 type Author = Readonly<{
 	_id: string;
 	name: string;
