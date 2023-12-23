@@ -1,23 +1,8 @@
-type CurrentAvailableNavigation = [
-	{ name: 'Home'; url: '/' },
-	{ name: 'About'; url: '/about' },
-	{ name: 'Experience'; url: '/experience' },
-	{ name: 'Posts'; url: '/posts' },
-	{ name: 'Projects'; url: '/projects' },
-	{ name: 'Terms & Conditions'; url: '/terms' },
-	{ name: 'Privacy Policy'; url: '/privacy' }
-];
-
-type NavigationItem = Readonly<{
-	_id: string;
-	custom: boolean;
-	name?: string;
-	customName?: string;
-	customUrl?: string;
-	target: '_self' | '_blank';
-	type: 'custom' | 'navbar' | 'footer';
-	order: number;
-}>;
+interface Navdata {
+	name: string;
+	url: string;
+	target: '_blank' | '_self';
+}
 
 type Author = Readonly<{
 	_id: string;
