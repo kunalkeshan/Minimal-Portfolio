@@ -34,42 +34,42 @@ export function validateAndReturnUserSocials(user: Author) {
 	const data: UserSocials = userSocials.parse([
 		{
 			Icon: Github,
-			url: user.github,
+			url: user?.github,
 			title: 'GitHub',
 		},
 		{
 			Icon: Instagram,
-			url: user.instagram,
+			url: user?.instagram,
 			title: 'Instagram',
 		},
 		{
 			Icon: Linkedin,
-			url: user.linkedin,
+			url: user?.linkedin,
 			title: 'LinkedIn',
 		},
 		{
 			Icon: Globe,
-			url: user.website,
+			url: user?.website,
 			title: 'Website',
 		},
 		{
 			Icon: Youtube,
-			url: user.youtube,
+			url: user?.youtube,
 			title: 'YouTube',
 		},
 		{
 			Icon: Twitter,
-			url: user.twitter,
+			url: user?.twitter,
 			title: 'Twitter',
 		},
 		{
 			Icon: Mail,
-			url: user.email ? `mailto:${user.email}` : null,
+			url: user?.email ? `mailto:${user?.email}` : null,
 			title: 'Mail',
 		},
 		{
 			Icon: Phone,
-			url: user.phone ? `tel:${user.phone}` : null,
+			url: user?.phone ? `tel:${user?.phone}` : null,
 			title: 'Phone',
 		},
 	]);
