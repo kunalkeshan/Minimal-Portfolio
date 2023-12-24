@@ -16,11 +16,11 @@ type MobileNavProps = React.ComponentProps<'nav'> & {
 const MobileNav: React.FC<MobileNavProps> = ({ close }) => {
 	return (
 		<NavigationMenu
-			className='min-w-full mt-4 [&>div]:w-full'
+			className='min-w-full mt-4 [&>div]:w-full items-start'
 			onClick={close}
 		>
 			<NavigationMenuList
-				className='min-w-full flex flex-col items-center justify-center gap-2'
+				className='min-w-full flex flex-col gap-2'
 				data-orientation='vertical'
 			>
 				{NAVBAR_NAVIGATION.map((item) => (

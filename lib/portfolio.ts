@@ -8,6 +8,7 @@ import {
 	Mail,
 	Twitter,
 	Youtube,
+	Phone,
 } from 'lucide-react';
 
 const userSocials = z
@@ -65,6 +66,11 @@ export function validateAndReturnUserSocials(user: Author) {
 			Icon: Mail,
 			url: user.email ? `mailto:${user.email}` : null,
 			title: 'Mail',
+		},
+		{
+			Icon: Phone,
+			url: user.phone ? `tel:${user.phone}` : null,
+			title: 'Phone',
 		},
 	]);
 	return data;

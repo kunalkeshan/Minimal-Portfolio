@@ -13,7 +13,7 @@ export default async function RootLayout({
 		<>
 			<Navbar user={user} />
 			{children}
-			<Footer />
+			<Footer user={user} />
 		</>
 	);
 }

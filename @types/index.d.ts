@@ -21,5 +21,6 @@ type Author = Readonly<{
 	linkedin?: string;
 	website?: string;
 	email?: string;
+	phone?: string;
 	youtube?: string;
 }>;

@@ -103,6 +103,21 @@ export default defineType({
 			group: 'professional',
 		}),
 		defineField({
+			name: 'email',
+			title: 'Email',
+			type: 'string',
+			group: 'social',
+			description: "The author's contact email address.",
+		}),
+		defineField({
+			name: 'phone',
+			title: 'Phone',
+			type: 'string',
+			group: 'social',
+			description:
+				"The author's mobile number. (Include the international code along with the number)",
+		}),
+		defineField({
 			name: 'github',
 			title: 'GitHub Profile',
 			type: 'url',
@@ -136,13 +151,6 @@ export default defineType({
 			type: 'url',
 			group: 'social',
 			description: "The author's personal or professional website URL.",
-		}),
-		defineField({
-			name: 'email',
-			title: 'Email',
-			type: 'string',
-			group: 'social',
-			description: "The author's contact email address.",
 		}),
 		defineField({
 			name: 'youtube',
