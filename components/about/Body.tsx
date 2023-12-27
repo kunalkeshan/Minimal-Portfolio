@@ -1,7 +1,30 @@
 import React from 'react';
+import { PortableText } from '@portabletext/react';
+import SanityImage from '@/components/reusable/SanityImage';
 
-const Body = () => {
-	return <div>Body</div>;
+type BodyProps = React.ComponentProps<'section'> & {
+	user: Author;
+};
+
+const portableTextComponents = {
+	types: {
+		image: ({ value }: any) => {
+			return <SanityImage {...value} />;
+		},
+	},
+};
+
+const Body: React.FC<BodyProps> = ({ user }) => {
+	return (
+		<section className='min-w-full mt-8 prose'>
+			{user.bio && (
+				<PortableText
+					value={user.bio}
+					components={portableTextComponents}
+				/>
+			)}
+		</section>
+	);
 };
 
 export default Body;

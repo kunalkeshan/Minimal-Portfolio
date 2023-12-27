@@ -13,7 +13,7 @@ type Author = Readonly<{
 	isMain: boolean;
 	about: string;
 	qualifications?: string;
-	bio?: string;
+	bio?: TypedObject | TypedObject[];
 	skills?: Array<string>;
 	github?: string;
 	instagram?: string;

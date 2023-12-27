@@ -9,7 +9,7 @@ const AboutPage = async () => {
 	return (
 		<main className='p-4 w-full max-w-4xl mx-auto'>
 			<Hero user={user} />
-			<Body />
+			<Body user={user} />
 		</main>
 	);
 };
