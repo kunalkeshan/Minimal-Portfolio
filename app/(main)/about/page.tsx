@@ -7,7 +7,7 @@ import { mainPortfolioUserQuery } from '@/sanity/lib/queries';
 const AboutPage = async () => {
 	const user = await sanityFetch<Author>({ query: mainPortfolioUserQuery });
 	return (
-		<main className='p-4 w-full max-w-4xl mx-auto'>
+		<main className='p-4 w-full'>
 			<Hero user={user} />
 			<Body user={user} />
 		</main>

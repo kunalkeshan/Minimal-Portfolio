@@ -18,6 +18,7 @@ module.exports = {
 		},
 		extend: {
 			maxWidth: {
+				xxxs: '12rem',
 				xxs: '16rem',
 			},
 			colors: {

@@ -7,7 +7,7 @@ type HeroProps = React.ComponentProps<'section'> & {
 
 const Hero: React.FC<HeroProps> = ({ user }) => {
 	return (
-		<section className='w-full grid grid-cols-1 md:grid-cols-2 gap-8'>
+		<section className='w-full max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8'>
 			<div>
 				<h1 className='text-2xl'>
 					{user?.name ? `I'm ${user.name}` : 'Minimal Portfolio'}

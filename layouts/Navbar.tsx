@@ -13,14 +13,8 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
 	return (
 		<nav className='p-4 w-full text-black'>
 			<div className='w-full max-w-4xl mx-auto flex items-center justify-between gap-8'>
-				<Link
-					href={'/'}
-					className='text-slate-500 hover:text-black transition-all duration-300 uppercase text-sm'
-				>
-					{user?.name ?? 'Portfolio'}
-				</Link>
 				<DesktopNav />
-				<div className='flex items-center gap-2'>
+				<div className='w-full md:w-fit flex items-center justify-between md:justify-normal flex-row-reverse md:flex-row gap-2'>
 					<Button size={'sm'} variant={'outline'} asChild>
 						<Link href={'/contact'}>
 							<Mail

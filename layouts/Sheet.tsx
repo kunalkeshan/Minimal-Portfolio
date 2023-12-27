@@ -42,7 +42,9 @@ const SheetNav: React.FC<SheetNavProps> = ({ user }) => {
 			<SheetContent className='flex flex-col md:hidden w-full h-full [&>div]:h-full'>
 				<SheetHeader>
 					<SheetTitle>
-						<Link href={'/'}>{user?.name ?? 'Portfolio'}</Link>
+						<Link onClick={handleClose} href={'/'}>
+							{user?.name ?? 'Portfolio'}
+						</Link>
 					</SheetTitle>
 					<SheetDescription className='text-slate-500 text-sm font-normal'>
 						{user?.about}
