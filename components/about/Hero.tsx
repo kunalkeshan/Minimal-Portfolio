@@ -18,7 +18,7 @@ const Hero: React.FC<HeroProps> = ({ user }) => {
 				</h2>
 			</div>
 			<div className='flex items-center justify-center'>
-				<div className='max-w-xs'>
+				<div className='max-w-xxs'>
 					<Image
 						src='/svgs/about.svg'
 						width={100}

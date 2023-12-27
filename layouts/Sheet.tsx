@@ -31,7 +31,10 @@ const SheetNav: React.FC<SheetNavProps> = ({ user }) => {
 
 	return (
 		<Sheet open={open} onOpenChange={setOpen}>
-			<SheetTrigger className='block md:hidden'>
+			<SheetTrigger
+				className='flex items-center justify-center md:hidden'
+				asChild
+			>
 				<Button size={'icon'} variant={'ghost'}>
 					<Menu strokeWidth={1.5} />
 				</Button>

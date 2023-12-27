@@ -21,9 +21,14 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
 				</Link>
 				<DesktopNav />
 				<div className='flex items-center gap-2'>
-					<Button size={'icon'} variant={'ghost'} asChild>
+					<Button size={'sm'} variant={'outline'} asChild>
 						<Link href={'/contact'}>
-							<Mail strokeWidth={1.5} />
+							<Mail
+								strokeWidth={1.5}
+								size={16}
+								className='shrink-0 mr-2'
+							/>
+							<span>Contact</span>
 						</Link>
 					</Button>
 					<SheetNav user={user} />
