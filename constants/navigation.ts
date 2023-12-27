@@ -4,6 +4,11 @@ type NavdataCollection = ReadonlyArray<Navdata>;
 
 const COMMON_NAVIGATION: NavdataCollection = [
 	{
+		name: 'Home',
+		url: '/',
+		target: '_self',
+	},
+	{
 		name: 'About',
 		url: '/about',
 		target: '_self',
@@ -28,11 +33,6 @@ const COMMON_NAVIGATION: NavdataCollection = [
 export const NAVBAR_NAVIGATION: NavdataCollection = [...COMMON_NAVIGATION];
 
 export const FOOTER_NAVIGATION: NavdataCollection = [
-	{
-		name: 'Home',
-		url: '/',
-		target: '_self',
-	},
 	...COMMON_NAVIGATION,
 	{
 		name: 'Contact',
