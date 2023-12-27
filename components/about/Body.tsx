@@ -16,7 +16,7 @@ const portableTextComponents = {
 
 const Body: React.FC<BodyProps> = ({ user }) => {
 	return (
-		<section className='min-w-full max-w-4xl mx-auto mt-8 prose'>
+		<section className='w-full max-w-4xl mx-auto mt-8 prose'>
 			{user.bio && (
 				<PortableText
 					value={user.bio}
